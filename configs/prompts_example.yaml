@@ -1,0 +1,4 @@
+- init_video:
+    - Couple_Runner
+  source_prompt:
+    - Two people are running on the street.

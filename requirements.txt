@@ -1,0 +1,12 @@
+torch>=2.1
+torchvision>=0.16
+diffusers>=0.25
+transformers>=4.36
+accelerate>=0.25
+omegaconf>=2.3
+einops>=0.7
+numpy>=1.24
+Pillow>=10.0
+tqdm>=4.66
+PyYAML>=6.0
+safetensors>=0.4

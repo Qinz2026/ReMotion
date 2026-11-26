@@ -1,0 +1,63 @@
+model_path: cerspense/zeroscope_v2_576w
+device: cuda
+seed: 42
+output_path: outputs/Couple_Runner/target_00
+data_path: data/frames/Couple_Runner
+mask_path:
+  - data/masks/Couple_Runner/background
+  - data/masks/Couple_Runner/object_0
+  - data/masks/Couple_Runner/object_1
+background_mask_index: 0
+subject_mask_indices:
+  - 1
+  - 2
+latents_path: data/latents/Couple_Runner
+source_prompt: Amazing quality, masterpiece, Two people are running on the street.
+target_prompt: Amazing quality, masterpiece, Two robots are running on the street.
+negative_prompt: bad quality, distortions, unrealistic, distorted image, watermark, signature
+guidance_scale: 12
+with_lr_decay: true
+optim_lr: 0.01
+scale_range:
+  - 0.0035
+  - 0.002
+optimization_steps: 5
+max_frames: 24
+n_timesteps: 50
+max_guidance_timestep: 1
+min_guidance_timestep: 0.3
+features_diff_loss_weight: 10
+trajectory_loss_weight: 1.0
+interaction_loss_weight: 0.5
+semantic_velocity_loss_weight: 0.25
+trajectory_velocity_weight: 0.5
+interaction_velocity_weight: 0.5
+interaction_order_margin: 0.02
+interaction_order_weight: 0.25
+feature_centroid_temperature: 1.0
+trajectory_estimator: prototype
+prototype_temperature: 0.05
+restart_sampling: false
+random_init: false
+high_freq_replacement_init: true
+downsample_factor: 4
+use_upsampler_features: true
+use_temporal_attention_features: true
+use_spatial_attention_features: true
+use_conv_features: true
+use_temp_conv_features: true
+up_res_dict:
+  1:
+    - 1
+guidance_before_res: true
+w_rescale: 1
+h_rescale: 1
+soft_guidance_alpha_start: 0.4
+soft_guidance_alpha_end: 0.1
+soft_guidance_power: 1.5
+direction_aware_margin: 0.1
+direction_aware_lambda_dir: 1.0
+direction_aware_lambda_mag: 0.25
+guidance_amp_policy: persistent
+sparse_mode: fixed
+sparse_attention_weight: 25000.0

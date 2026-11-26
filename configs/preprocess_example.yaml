@@ -1,0 +1,9 @@
+base_video_path: data/frames
+base_save_dir: data/latents
+prompt_yaml_path: configs/prompts_example.yaml
+
+max_number_of_frames: 24
+n_timesteps: 999
+prompt_prefix: "Amazing quality, masterpiece, "
+negative_prompt: ""
+save_ddim_reconstruction: true

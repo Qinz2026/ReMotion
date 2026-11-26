@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Data, cached latents, outputs, and model weights
+data/
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.mp4
+*.mov
+*.avi
+*.png
+*.jpg
+*.jpeg
+
+# Logs and local files
+logs/
+*.log
+.DS_Store
+.env
